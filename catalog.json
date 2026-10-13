@@ -1,0 +1,1060 @@
+{
+  "format": 1,
+  "name": "mVocalToolkit catalog",
+  "version": 1,
+  "models": [
+    {
+      "id": "whisper-large-v3-turbo",
+      "engine": "whisperx",
+      "name": "Whisper large-v3-turbo",
+      "description": "Fast and accurate multilingual recognizer (recommended).",
+      "languages": [
+        "*"
+      ],
+      "size_hint": "1.6 GB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model": "large-v3-turbo"
+      }
+    },
+    {
+      "id": "whisper-large-v3",
+      "engine": "whisperx",
+      "name": "Whisper large-v3",
+      "description": "Most accurate, slower than turbo.",
+      "languages": [
+        "*"
+      ],
+      "size_hint": "3 GB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model": "large-v3"
+      }
+    },
+    {
+      "id": "whisper-medium",
+      "engine": "whisperx",
+      "name": "Whisper medium",
+      "languages": [
+        "*"
+      ],
+      "size_hint": "1.5 GB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model": "medium"
+      }
+    },
+    {
+      "id": "whisper-small",
+      "engine": "whisperx",
+      "name": "Whisper small",
+      "description": "For weak GPUs / CPU.",
+      "languages": [
+        "*"
+      ],
+      "size_hint": "0.5 GB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model": "small"
+      }
+    },
+    {
+      "id": "sofa-ru-hhskt-v0.0.1",
+      "engine": "sofa",
+      "name": "Russian SOFA hhskt_ru v0.0.1",
+      "version": "0.0.1",
+      "languages": [
+        "ru"
+      ],
+      "text_frontend": "ru",
+      "author": "m & HHS_kt",
+      "description": "Russian singing aligner trained by m and hhs_kt (the model is named after hhs_kt). Data: hhs_kt, XHR0ME, Miya, m, Gitreti, about 4 hours. Modified cmusphinx-ru-5.2 dictionary and a G2P by m for unknown words. When you label with it, please link the model page or the hhs_kt channel (t.me/hhs_kt_666).",
+      "homepage": "https://github.com/Megageorgio/SOFA-Models/releases/tag/Russian_v0.0.1",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/SOFA-Models",
+        "tag": "Russian_v0.0.1",
+        "asset": "hhskt_ru_v0.0.1_safetensors.zip"
+      }
+    },
+    {
+      "id": "sofa-pack-v030",
+      "type": "pack",
+      "engine": "sofa",
+      "name": "SOFA model pack v030 (English, French, Mandarin, Japanese, Korean)",
+      "description": "English, French, Mandarin, Japanese and Korean SOFA models with G2P: tgm v0.0.5 (tigermeat), millefeuille b001 (imsupposedto), suco (SOFA v1.0.1), colstone Japanese v0.0.2b and Korean v0.0.1b. Downloading the pack registers every model inside as sofa-pack-<folder>.",
+      "author": "tigermeat and contributors",
+      "homepage": "https://github.com/spicytigermeat/LabelMakr",
+      "prefix": "sofa-pack-",
+      "defaults": {},
+      "source": {
+        "type": "github_release",
+        "repo": "spicytigermeat/LabelMakr",
+        "tag": "assets_v030",
+        "asset": "models.zip"
+      },
+      "languages": [
+        "en",
+        "fr",
+        "zh",
+        "ja",
+        "ko"
+      ],
+      "size_hint": "1.9 GB (all five models)",
+      "models": [
+        {
+          "id": "sofa-pack-tgm_sofa_en",
+          "folder": "tgm_sofa_en",
+          "name": "English SOFA tgm v0.0.5 (v030 pack)",
+          "languages": [
+            "en"
+          ],
+          "text_frontend": "en",
+          "defaults": {
+            "rule_sets": [
+              "en_fixes"
+            ]
+          },
+          "author": "tigermeat"
+        },
+        {
+          "id": "sofa-pack-millefeuille_fr",
+          "folder": "millefeuille_fr",
+          "name": "French SOFA millefeuille b001 (v030 pack)",
+          "languages": [
+            "fr"
+          ],
+          "text_frontend": "fr",
+          "author": "imsupposedto"
+        },
+        {
+          "id": "sofa-pack-suco_zh",
+          "folder": "suco_zh",
+          "name": "Mandarin SOFA (v030 pack)",
+          "languages": [
+            "zh"
+          ],
+          "text_frontend": "zh",
+          "author": "suco"
+        },
+        {
+          "id": "sofa-pack-colstone_jp",
+          "folder": "colstone_jp",
+          "name": "Japanese SOFA v0.0.2b (v030 pack)",
+          "languages": [
+            "ja"
+          ],
+          "text_frontend": "ja",
+          "author": "colstone"
+        },
+        {
+          "id": "sofa-pack-colstone_ko",
+          "folder": "colstone_ko",
+          "name": "Korean SOFA v0.0.1b (v030 pack)",
+          "languages": [
+            "ko"
+          ],
+          "text_frontend": "ko",
+          "author": "colstone"
+        }
+      ]
+    },
+    {
+      "id": "sofa-en-tgm-v1.0.0",
+      "type": "pack",
+      "engine": "sofa",
+      "name": "English SOFA tgm v1.0.0",
+      "languages": [
+        "en"
+      ],
+      "text_frontend": "en",
+      "homepage": "https://github.com/spicytigermeat/LabelMakr/releases/tag/tgm_en_v100",
+      "prefix": "sofa-pack-",
+      "defaults": {
+        "rule_sets": [
+          "en_fixes"
+        ]
+      },
+      "source": {
+        "type": "github_release",
+        "repo": "spicytigermeat/LabelMakr",
+        "tag": "tgm_en_v100",
+        "asset": "tgm_en_v100.zip"
+      },
+      "size_hint": "362 MB",
+      "author": "tigermeat",
+      "version": "1.0.0",
+      "description": "Newer English model than the v0.0.5 in the v030 pack (other weights, same dictionary and G2P); trained only on data labelled or checked by hand by its author.",
+      "models": [
+        {
+          "id": "sofa-tgm_en_v100",
+          "folder": "tgm_en_v100",
+          "name": "English SOFA tgm v1.0.0",
+          "author": "tigermeat",
+          "languages": [
+            "en"
+          ],
+          "text_frontend": "en",
+          "defaults": {
+            "rule_sets": [
+              "en_fixes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sofa-ja-akm-v0.0.1",
+      "engine": "sofa",
+      "name": "Japanese SOFA akm_ja v0.0.1",
+      "version": "0.0.1",
+      "languages": [
+        "ja"
+      ],
+      "text_frontend": "ja",
+      "author": "ariikamusic",
+      "description": "Japanese singing aligner trained on hand-annotated data (the author's own and community datasets). May misplace phonemes on noisy audio and put stray AP/SP into long silence.",
+      "homepage": "https://github.com/ariikamusic/SOFA_Models/releases/tag/akm_ja_v001",
+      "size_hint": "378 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "ariikamusic/SOFA_Models",
+        "tag": "akm_ja_v001",
+        "asset": "akm_ja_v001.zip"
+      }
+    },
+    {
+      "id": "sofa-ja-greenleaf-test2plus",
+      "engine": "sofa",
+      "name": "Japanese SOFA Test2_Plus",
+      "version": "Test2_Plus",
+      "languages": [
+        "ja"
+      ],
+      "text_frontend": "ja",
+      "author": "Greenleaf2001",
+      "license": "no commercial use",
+      "description": "Japanese singing aligner (japanese-extension dictionary, romaji preferred), a smaller and faster model than Test2.",
+      "homepage": "https://github.com/Greenleaf2001/SOFA_Models/releases/tag/JPN_Test2_Plus",
+      "size_hint": "53 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "Greenleaf2001/SOFA_Models",
+        "tag": "JPN_Test2_Plus",
+        "asset": [
+          "step.100000.ckpt",
+          "japanese-extension-sofa.txt",
+          "hparams.yaml"
+        ]
+      }
+    },
+    {
+      "id": "sofa-zh-baishuo-v2.1",
+      "engine": "sofa",
+      "name": "Mandarin SOFA v2.1",
+      "version": "2.1",
+      "languages": [
+        "zh"
+      ],
+      "text_frontend": "zh",
+      "author": "BaiShuo",
+      "license": "CC BY-NC-SA",
+      "description": "Mandarin singing aligner with the opencpop-extension dictionary, trained on open and community datasets.",
+      "homepage": "https://github.com/BaiShuoQwQ/SOFA_Models/releases/tag/SOFA_model_mandarin_byBaiShuo_v2.1",
+      "size_hint": "406 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "BaiShuoQwQ/SOFA_Models",
+        "tag": "SOFA_model_mandarin_byBaiShuo_v2.1",
+        "asset": "SOFA_model_mandarin_byBaiShuo.zip"
+      }
+    },
+    {
+      "id": "sofa-zh-acv-beta-0.0.1",
+      "engine": "sofa",
+      "name": "Mandarin SOFA ACV beta 0.0.1",
+      "version": "0.0.1",
+      "languages": [
+        "zh"
+      ],
+      "text_frontend": "zh",
+      "author": "Archivoice",
+      "description": "Mandarin singing aligner with ACV-style phonemes (dict_cn.txt), hand-labelled ACV-001 and part of OpenCPop. Beta: little data diversity. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it.",
+      "homepage": "https://github.com/Archivoice/SOFA-models/releases/tag/beta_0.0.1",
+      "size_hint": "378 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/SOFA-models",
+        "tag": "beta_0.0.1",
+        "asset": "ACV_chn_beta_0.0.1.rar",
+        "sha256": "2d00bbd0f539cc9ecef24865768fc459b7b28c90dfa2bafb4285c7b20ec23cbf"
+      }
+    },
+    {
+      "id": "sofa-yue-ribosomek-v0.1",
+      "engine": "sofa",
+      "name": "Cantonese SOFA v0.1",
+      "version": "0.1",
+      "languages": [
+        "yue"
+      ],
+      "text_frontend": "yue",
+      "author": "RibosomeK",
+      "license": "MIT",
+      "description": "Cantonese singing aligner; jyutping dictionary with an arpabet-like phoneme scheme.",
+      "homepage": "https://github.com/RibosomeK/SOFA-Cantonese-Model/releases/tag/v0.1",
+      "size_hint": "377 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "RibosomeK/SOFA-Cantonese-Model",
+        "tag": "v0.1",
+        "asset": "canontese-arpabet-v0.1.zip"
+      }
+    },
+    {
+      "id": "sofa-yue-azairons-250816",
+      "engine": "sofa",
+      "name": "Cantonese SOFA 250816",
+      "version": "250816",
+      "languages": [
+        "yue"
+      ],
+      "text_frontend": "yue",
+      "author": "AzairoNS",
+      "description": "Cantonese singing aligner; jyutping dictionary.",
+      "homepage": "https://github.com/AzairoNS/CantoneseSOFA-AzairoNS-/releases/tag/250816",
+      "size_hint": "377 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "AzairoNS/CantoneseSOFA-AzairoNS-",
+        "tag": "250816",
+        "asset": "Cantonese_AzairoNS_250816.zip",
+        "sha256": "0356f960ca744b9e9fc5d0614e43b556b64ba1754b0ab5f6100d064adce48f1c"
+      }
+    },
+    {
+      "id": "hubertfa-zh-ja-en-v0.0.7",
+      "engine": "hubertfa",
+      "name": "HubertFA v0.0.7 (Mandarin, Japanese, English)",
+      "languages": [
+        "zh",
+        "ja",
+        "en"
+      ],
+      "description": "Multilingual singing aligner (dictionaries: ds-zh-pinyin-lite, japanese_dict_full romaji, ds_cmudict-07b); detects breaths (AP) and other non-lexical sounds (EP).",
+      "author": "wolfgitpr",
+      "license": "MIT",
+      "homepage": "https://github.com/wolfgitpr/HubertFA/releases",
+      "source": {
+        "type": "github_release",
+        "repo": "wolfgitpr/HubertFA",
+        "tag": "v0.0.7",
+        "asset": "1218_hfa_model_new_dict.zip"
+      },
+      "version": "0.0.7",
+      "size_hint": "245 MB"
+    },
+    {
+      "id": "tifa-1.0-st",
+      "engine": "tifa",
+      "name": "TIFA 1.0-ST (Mandarin, Cantonese, Japanese, English)",
+      "languages": [
+        "zh",
+        "yue",
+        "ja",
+        "en"
+      ],
+      "description": "Speech and singing aligner by OpenVPI. Languages can be mixed in one text; when a word can be read in several ways it picks the reading heard in the audio; gives self-check scores so badly aligned files can be found without listening to everything. Phonemes: DiffSinger sets (ds-zh-pinyin-lite, jyutping, Japanese romaji, ds_cmudict-07b).",
+      "author": "OpenVPI",
+      "license": "MIT",
+      "homepage": "https://github.com/openvpi/TIFA/releases/tag/v1.0.0",
+      "source": {
+        "type": "github_release",
+        "repo": "openvpi/TIFA",
+        "tag": "v1.0.0",
+        "asset": "TIFA-1.0-ST.zip",
+        "sha256": "6da6832cd2cb981aae1ccc2d9330f8f7c085ce7977d1eb13bff63531d038a88b"
+      },
+      "version": "1.0",
+      "size_hint": "151 MB"
+    },
+    {
+      "id": "tifa-ru-hhskt-v0.0.1",
+      "engine": "tifa",
+      "name": "TIFA Russian hhskt_ru v0.0.1",
+      "version": "0.0.1",
+      "languages": [
+        "ru"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Russian singing aligner (TIFA by OpenVPI) trained by m and hhs_kt on about 10 hours of Russian singing; also post-trained on long sequences, so whole songs align as well as phrases. Same 51-phoneme set as the Russian SOFA and WFL-ASR models (modified cmusphinx-ru-5.2 dictionary, 534k words). Works best with optional breaths on. When you label with it, please link the model page or the hhs_kt channel (t.me/hhs_kt_666).",
+      "homepage": "https://github.com/Megageorgio/TIFA-Models/releases/tag/Russian_v0.0.1",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/TIFA-Models",
+        "tag": "Russian_v0.0.1",
+        "asset": "hhskt_ru_v0.0.1.zip"
+      },
+      "size_hint": "150 MB"
+    },
+    {
+      "id": "wfl-ru-hhskt-v0.0.1",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Russian hhskt_ru small v0.0.1",
+      "version": "0.0.1",
+      "languages": [
+        "ru"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Phoneme recognition without text for Russian singing, trained by m and HHS_kt (named after HHS_kt). Data: HHS_kt, XHR0ME, Miya, m, Gitreti, about 4 hours. Same phoneme set as the Russian SOFA model. When you label with it, please link the model page or the HHS_kt channel (t.me/hhs_kt_666).",
+      "homepage": "https://github.com/Megageorgio/WFL-ASR-hhskt-ru/releases/tag/Russian_v0.0.1",
+      "size_hint": "71 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/WFL-ASR-hhskt-ru",
+        "tag": "Russian_v0.0.1",
+        "asset": "hhskt-ru-small.zip"
+      }
+    },
+    {
+      "id": "wfl-asr-ft-en-ja",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR fine-tuned (English, Japanese)",
+      "homepage": "https://github.com/MLo7Ghinsan/WFL-ASR/releases/tag/model_release",
+      "source": {
+        "type": "github_release",
+        "repo": "MLo7Ghinsan/WFL-ASR",
+        "tag": "model_release",
+        "asset": "ft_model.zip"
+      },
+      "size_hint": "178 MB",
+      "languages": [
+        "en",
+        "ja"
+      ],
+      "description": "Phoneme recognition without text (Whisper-base encoder). The release's model_1.0.zip needs older WFL-ASR code and is not used."
+    },
+    {
+      "id": "game-large",
+      "engine": "game",
+      "name": "GAME large",
+      "languages": [
+        "en",
+        "ja",
+        "zh",
+        "yue"
+      ],
+      "description": "Best quality note extraction (~100M parameters).",
+      "homepage": "https://github.com/openvpi/GAME/releases",
+      "source": {
+        "type": "github_release",
+        "repo": "openvpi/GAME",
+        "tag": "v1.0.3",
+        "asset": "GAME-1.0.3-large-onnx.zip"
+      },
+      "size_hint": "345 MB"
+    },
+    {
+      "id": "game-medium",
+      "engine": "game",
+      "name": "GAME medium",
+      "languages": [
+        "en",
+        "ja",
+        "zh",
+        "yue"
+      ],
+      "homepage": "https://github.com/openvpi/GAME/releases",
+      "source": {
+        "type": "github_release",
+        "repo": "openvpi/GAME",
+        "tag": "v1.0.3",
+        "asset": "GAME-1.0.3-medium-onnx.zip"
+      },
+      "size_hint": "171 MB"
+    },
+    {
+      "id": "game-small",
+      "engine": "game",
+      "name": "GAME small",
+      "languages": [
+        "en",
+        "ja",
+        "zh",
+        "yue"
+      ],
+      "description": "Fast, ~12M parameters.",
+      "homepage": "https://github.com/openvpi/GAME/releases",
+      "source": {
+        "type": "github_release",
+        "repo": "openvpi/GAME",
+        "tag": "v1.0.3",
+        "asset": "GAME-1.0.3-small-onnx.zip"
+      },
+      "size_hint": "44 MB"
+    },
+    {
+      "id": "deeprhythm",
+      "engine": "tempo",
+      "name": "DeepRhythm",
+      "source": {
+        "type": "engine"
+      }
+    },
+    {
+      "id": "separation-vocals-bs-roformer",
+      "engine": "separation",
+      "name": "Vocals / instrumental: BS-Roformer (ViperX 1297)",
+      "description": "High quality vocal extraction from a full mix.",
+      "size_hint": "640 MB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model_file": "model_bs_roformer_ep_317_sdr_12.9755.ckpt"
+      },
+      "tags": [
+        "vocals"
+      ]
+    },
+    {
+      "id": "separation-vocals-mdx-fast",
+      "engine": "separation",
+      "name": "Vocals / instrumental: MDX-Net Voc FT (fast)",
+      "description": "Lighter vocal extraction, several times faster without an NVIDIA GPU; a little less clean than the Roformers.",
+      "size_hint": "65 MB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model_file": "UVR-MDX-NET-Voc_FT.onnx"
+      },
+      "tags": [
+        "vocals"
+      ]
+    },
+    {
+      "id": "separation-vocals-melband-roformer",
+      "engine": "separation",
+      "name": "Vocals / instrumental: MelBand Roformer (Kim)",
+      "description": "Vocal extraction, often cleaner on singing.",
+      "size_hint": "900 MB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model_file": "vocals_mel_band_roformer.ckpt"
+      },
+      "tags": [
+        "vocals"
+      ]
+    },
+    {
+      "id": "separation-karaoke-melband-roformer",
+      "engine": "separation",
+      "name": "Lead / backing vocals: MelBand Roformer karaoke",
+      "description": "Separates the lead vocal from backing vocals (run on already extracted vocals).",
+      "size_hint": "900 MB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model_file": "mel_band_roformer_karaoke_aufr33_viperx_sdr_10.1956.ckpt"
+      },
+      "tags": [
+        "karaoke"
+      ]
+    },
+    {
+      "id": "separation-dereverb-echo",
+      "engine": "separation",
+      "name": "De-reverb / de-echo (UVR VR)",
+      "description": "Removes reverb and echo from vocals.",
+      "size_hint": "120 MB",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "model_file": "UVR-DeEcho-DeReverb.pth"
+      },
+      "tags": [
+        "dereverb"
+      ]
+    },
+    {
+      "id": "pc-nsf-hifigan-2025.02",
+      "engine": "vocoder",
+      "name": "PC-NSF-HiFiGAN 44.1 kHz (2025.02)",
+      "version": "2025.02",
+      "author": "OpenVPI",
+      "description": "The vocoder of DiffSinger models, with pitch shifting that keeps the formants. Used to hear a recording with an edited f0. Weights by the OpenVPI team under CC BY-NC-SA 4.0: free for non-commercial use with credit; results can't be used commercially. Downloaded from the official release on first use; the NOTICE and STATEMENTS files of the release are kept in the model folder.",
+      "homepage": "https://github.com/openvpi/vocoders/releases/tag/pc-nsf-hifigan-44.1k-hop512-128bin-2025.02",
+      "license": "CC BY-NC-SA 4.0",
+      "size_hint": "53 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "openvpi/vocoders",
+        "tag": "pc-nsf-hifigan-44.1k-hop512-128bin-2025.02",
+        "asset": "pc_nsf_hifigan_44.1k_hop512_128bin_2025.02.oudep",
+        "sha256": "ba7d43142d41f6900c8264b5662ca7125a50feb8760bb8b9615c61a8f5e6902e"
+      }
+    },
+    {
+      "id": "rmvpe",
+      "engine": "pitch",
+      "name": "RMVPE",
+      "description": "Robust f0 for singing, also on noisy or accompanied audio.",
+      "size_hint": "180 MB",
+      "license": "MIT",
+      "source": {
+        "type": "huggingface",
+        "repo": "lj1995/VoiceConversionWebUI",
+        "files": [
+          "rmvpe.pt"
+        ]
+      },
+      "params": {
+        "method": "rmvpe"
+      }
+    },
+    {
+      "id": "fcpe",
+      "engine": "pitch",
+      "name": "FCPE",
+      "description": "Fast f0 estimation (model included in the engine).",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "method": "fcpe"
+      }
+    },
+    {
+      "id": "parselmouth",
+      "engine": "pitch",
+      "name": "Parselmouth (Praat)",
+      "description": "Classic autocorrelation f0, CPU only, best on clean speech-like audio.",
+      "source": {
+        "type": "engine"
+      },
+      "params": {
+        "method": "parselmouth"
+      }
+    },
+    {
+      "id": "wfl-archivoice-yue-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Cantonese (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "cantonese.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "yue"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-ka-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Georgian (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "georgian.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "ka"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-el-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Greek (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "greek.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "el"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-nan-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Hokkien (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "hokkien.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "nan"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-ja-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Japanese (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "ja.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "ja"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-ko-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Korean (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "korean.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "ko"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-zh-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Mandarin Chinese (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "mandarin.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "zh"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-es-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Spanish (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "spanish.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "es"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-archivoice-th-2026-09",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Archivoice Thai (2026-09)",
+      "homepage": "https://github.com/Archivoice/WFL-ASR-model/releases/tag/2026_09",
+      "source": {
+        "type": "github_release",
+        "repo": "Archivoice/WFL-ASR-model",
+        "tag": "2026_09",
+        "asset": "thai.rar"
+      },
+      "size_hint": "228 MB",
+      "languages": [
+        "th"
+      ],
+      "author": "Archivoice",
+      "description": "Phoneme recognition without text, trained on ACV-format datasets (WFL-ASR refactor branch). Best on voices it has seen: a good base for fine-tuning. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-aztr",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Azerbaijani and Turkish",
+      "homepage": "https://github.com/ZzHus272/WFL-ASR-AZTR",
+      "source": {
+        "type": "github_release",
+        "repo": "ZzHus272/WFL-ASR-AZTR",
+        "tag": "AZTR-model",
+        "asset": "aztr.rar",
+        "sha256": "6c9720c3b2986b64d125ef24816de046cf38466d161eacb8dcc3191d6fcdcc50"
+      },
+      "size_hint": "552 MB",
+      "languages": [
+        "az",
+        "tr"
+      ],
+      "author": "ZzHus272",
+      "description": "Phoneme recognition without text for Azerbaijani and Turkish. The archive is RAR: 7-Zip or the tar of Windows 10/11 unpacks it."
+    },
+    {
+      "id": "wfl-generic-en-mega5",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR generic English (mega-5)",
+      "homepage": "https://github.com/Superbox2147/wfl-generic-en/releases/tag/mega-5",
+      "source": {
+        "type": "github_release",
+        "repo": "Superbox2147/wfl-generic-en",
+        "tag": "mega-5",
+        "asset": "mega-5-small.7z"
+      },
+      "size_hint": "350 MB",
+      "languages": [
+        "en"
+      ],
+      "author": "Superbox2147",
+      "description": "Phoneme recognition without text for English, trained on 15 singing datasets (WFL-ASR refactor branch)."
+    },
+    {
+      "id": "wfl-italian-small-1.1",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Italian small 1.1",
+      "homepage": "https://github.com/gnloop/WFL-italian-small/releases/tag/model_test",
+      "source": {
+        "type": "github_release",
+        "repo": "gnloop/WFL-italian-small",
+        "tag": "model_test",
+        "asset": "ita_small_b.7z",
+        "sha256": "383fe69246b0203888686734c258fa17cc547dcd2cc105718c3c16466b0f7e13"
+      },
+      "size_hint": "221 MB",
+      "languages": [
+        "it"
+      ],
+      "author": "gnloop",
+      "description": "Small Italian model, 5 speakers. The author: lower error rate than 1.0, not sure it is better."
+    },
+    {
+      "id": "wfl-italian-small-1.0",
+      "engine": "wfl_asr",
+      "name": "WFL-ASR Italian small 1.0",
+      "homepage": "https://github.com/gnloop/WFL-italian-small/releases/tag/model",
+      "source": {
+        "type": "github_release",
+        "repo": "gnloop/WFL-italian-small",
+        "tag": "model",
+        "asset": "wfl_italian_small.7z"
+      },
+      "size_hint": "221 MB",
+      "languages": [
+        "it"
+      ],
+      "author": "gnloop",
+      "description": "Small Italian model, 5 speakers, for testing."
+    },
+    {
+      "id": "mrefiner-ru-v0.1.0",
+      "engine": "refiner",
+      "name": "mRefinerModel Russian v0.1.0",
+      "version": "0.1.0",
+      "languages": [
+        "ru"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Refines phoneme boundaries after any labeller (trained on Russian singing after WFL-ASR; same phoneme set as the Russian SOFA and WFL-ASR models). With other languages or labelling styles it moves only confident boundaries and not far (safe mode).",
+      "homepage": "https://github.com/Megageorgio/mRefinerModel",
+      "license": "MIT",
+      "size_hint": "7 MB",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/mRefinerModel",
+        "tag": "Russian_v0.0.1",
+        "asset": "mrefinermodel-ru-v0.1.0.zip"
+      }
+    },
+    {
+      "id": "MCFL_multi13_s_v0.0.1",
+      "engine": "mcfl",
+      "name": "MCFL multi13 s v0.0.1",
+      "homepage": "https://github.com/Megageorgio/MCFL/releases/tag/Multi13_v0.0.1",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/MCFL",
+        "tag": "Multi13_v0.0.1",
+        "asset": "MCFL_multi13_s_v0.0.1.zip"
+      },
+      "size_hint": "6.3 MB",
+      "languages": [
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nan",
+        "pt",
+        "ru",
+        "yue",
+        "zh"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Phonemes of singing without lyrics, 13 languages, fast on a CPU (MCFL, distilled from a multilingual WFL-ASR). 3.4M parameters, ~450x real time on one CPU thread; the default."
+    },
+    {
+      "id": "MCFL_multi13_xxxs_v0.0.1",
+      "engine": "mcfl",
+      "name": "MCFL multi13 xxxs v0.0.1",
+      "homepage": "https://github.com/Megageorgio/MCFL/releases/tag/Multi13_v0.0.1",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/MCFL",
+        "tag": "Multi13_v0.0.1",
+        "asset": "MCFL_multi13_xxxs_v0.0.1.zip"
+      },
+      "size_hint": "0.7 MB",
+      "languages": [
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nan",
+        "pt",
+        "ru",
+        "yue",
+        "zh"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Phonemes of singing without lyrics, 13 languages, fast on a CPU (MCFL, distilled from a multilingual WFL-ASR). 0.4M parameters, ~1000x real time."
+    },
+    {
+      "id": "MCFL_multi13_xxs_v0.0.1",
+      "engine": "mcfl",
+      "name": "MCFL multi13 xxs v0.0.1",
+      "homepage": "https://github.com/Megageorgio/MCFL/releases/tag/Multi13_v0.0.1",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/MCFL",
+        "tag": "Multi13_v0.0.1",
+        "asset": "MCFL_multi13_xxs_v0.0.1.zip"
+      },
+      "size_hint": "1.4 MB",
+      "languages": [
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nan",
+        "pt",
+        "ru",
+        "yue",
+        "zh"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Phonemes of singing without lyrics, 13 languages, fast on a CPU (MCFL, distilled from a multilingual WFL-ASR). 0.8M parameters, ~870x real time."
+    },
+    {
+      "id": "MCFL_multi13_m_v0.0.1",
+      "engine": "mcfl",
+      "name": "MCFL multi13 m v0.0.1",
+      "homepage": "https://github.com/Megageorgio/MCFL/releases/tag/Multi13_v0.0.1",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/MCFL",
+        "tag": "Multi13_v0.0.1",
+        "asset": "MCFL_multi13_m_v0.0.1.zip"
+      },
+      "size_hint": "13.8 MB",
+      "languages": [
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nan",
+        "pt",
+        "ru",
+        "yue",
+        "zh"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Phonemes of singing without lyrics, 13 languages, fast on a CPU (MCFL, distilled from a multilingual WFL-ASR). 7.5M parameters, ~285x real time."
+    },
+    {
+      "id": "MCFL_multi13_l_v0.0.1",
+      "engine": "mcfl",
+      "name": "MCFL multi13 l v0.0.1",
+      "homepage": "https://github.com/Megageorgio/MCFL/releases/tag/Multi13_v0.0.1",
+      "source": {
+        "type": "github_release",
+        "repo": "Megageorgio/MCFL",
+        "tag": "Multi13_v0.0.1",
+        "asset": "MCFL_multi13_l_v0.0.1.zip"
+      },
+      "size_hint": "24.2 MB",
+      "languages": [
+        "de",
+        "el",
+        "en",
+        "es",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nan",
+        "pt",
+        "ru",
+        "yue",
+        "zh"
+      ],
+      "author": "m & HHS_kt",
+      "description": "Phonemes of singing without lyrics, 13 languages, fast on a CPU (MCFL, distilled from a multilingual WFL-ASR). 13.1M parameters, ~200x real time, the most accurate."
+    }
+  ]
+}

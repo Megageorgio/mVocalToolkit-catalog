@@ -34,13 +34,22 @@ Add an entry to `models` in `catalog.json`:
   the toolkit's [docs/API.md](https://github.com/Megageorgio/mVocalToolkit/blob/main/docs/API.md#catalog-format).
 - `format` at the top is the version of the file format. A toolkit older than the format keeps its last copy.
 
+## Adding a dataset
+
+Public singing datasets for training go into `datasets` (format in the toolkit's
+[docs/API.md](https://github.com/Megageorgio/mVocalToolkit/blob/main/docs/API.md#datasets)). Every dataset needs its
+`license`: name, link, a short summary and what it allows (`training`, `publish_models`, `commercial`,
+`redistribution`, `attribution`). A dataset whose license doesn't allow training is not added (the toolkit would hide
+it anyway). When the license is unclear, leave the dataset out.
+
 Check that the file is valid JSON before committing: `python -m json.tool catalog.json > /dev/null`.
 
 ## Русский
 
 Список моделей, которые предлагает [mVocalToolkit](https://github.com/Megageorgio/mVocalToolkit) (и через него
 mLabeler). Тулкит читает `catalog.json` из этого репозитория при каждом запуске и при каждой проверке обновлений:
-модель, добавленная сюда, появляется у всех без нового тулкита. Без сети используется последняя прочитанная копия,
+модель, добавленная сюда, появляется у всех без нового тулкита. В `datasets` — публичные певческие датасеты для
+обучения, у каждого обязательно указана лицензия; датасеты, которые нельзя использовать для обучения, не добавляются. Без сети используется последняя прочитанная копия,
 а если её нет — копия внутри тулкита.
 
 Чтобы добавить модель, допишите запись в `models` (пример выше). Автора пишите в `author`, а не в название: он
